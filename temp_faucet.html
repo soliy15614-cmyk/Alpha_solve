@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#2DD4BF">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-navbutton-color" content="#2DD4BF">
+    <title>Faucet | EarnSolana - Free Solana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <meta content="Free Solana" name="description" />
+    <meta content="Vie Faucet Script" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="https://earnsolana.xyz/assets/images/logo.webp">
+
+    <!-- Bootstrap Css -->
+    <link href="https://earnsolana.xyz/assets/css/bootstrap.min.css?v=4.4.2" id="bootstrap-style" rel="stylesheet" type="text/css" /><link href="https://earnsolana.xyz/assets/css/app.min.css?v=4.4.2" id="bootstrap-style" rel="stylesheet" type="text/css" />    <!-- Icons Css -->
+    <link href="https://earnsolana.xyz/assets/css/icons.min.css?v=4.4.2" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="https://earnsolana.xyz/assets/css/styles.css?v=4.4.2" rel="stylesheet" type="text/css" />
+ <style>
+     .vertical-menu{
+    transition: all .3s ease-in-out;
+}
+ </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8P053CH848"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8P053CH848');
+</script>
+</head>
+
+
+<body data-sidebar="dark">
+
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                </div>
+                        <div class="">
+                        <a href="https://earnsolana.xyz/" class="logo logo-light">
+                            <span class="logo-sm">
+                                <img src="https://earnsolana.xyz/assets/images/earnsol.webp" alt="" style="height: 50px">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="https://earnsolana.xyz/assets/images/earnsol.webp" alt="" style="height: 50px">
+                            </span>
+                        </a>
+                    </div>
+                      
+                <div class="d-flex">
+
+                      
+                    
+                    <div class="dropdown d-inline-block" id="notifications">
+                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="bx bx-bell"></i>
+                                                    </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0" aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar="init" style="max-height: 230px;">
+                                <div class="simplebar-wrapper" style="margin: 0px;">
+                                    <div class="simplebar-height-auto-observer-wrapper">
+                                        <div class="simplebar-height-auto-observer"></div>
+                                    </div>
+                                    <div class="simplebar-mask">
+                                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                            <div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;">
+                                                <div class="simplebar-content" style="padding: 0px;">
+                                                                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
+                                </div>
+                                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                                    <div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;"></div>
+                                </div>
+                                <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
+                                    <div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="https://earnsolana.xyz/assets/images/users/user.png" alt="Header Avatar">
+                            <span class="d-none d-xl-inline-block ml-1" key="t-henry">Alphapython</span>
+                            <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <!-- item-->
+                            <a class="dropdown-item" href="https://earnsolana.xyz/profile"><i class="far fa-user-circle"></i> <span key="t-profile">Profile</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="https://earnsolana.xyz/auth/logout"><i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+      <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        
+
+                        <li>
+                            <a href="https://earnsolana.xyz/dashboard" class="waves-effect">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span key="t-dashboard">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://earnsolana.xyz/referrals" class="waves-effect">
+                                <i class="fas fa-users"></i>
+                                <span key="t-dashboard">Referrals</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://earnsolana.xyz/leaderboard" class="waves-effect">
+                                <i class="fas fa-list-ol"></i>
+                                <span key="t-dashboard">Weekly Contest</span>
+                            </a>
+                        </li>
+                                                     <li>
+                                <a href="https://earnsolana.xyz/coupon" class="waves-effect">
+                                    <i class="fas fa-file"></i>
+                                    <span key="t-coupon">Coupon</span>
+                                </a>
+                            </li>
+                                                 <li>
+                            <a href="https://earnsolana.xyz/withdraw" class="waves-effect">
+                                <i class="fas fa-wallet"></i>
+                                <span key="t-dashboard">Withdraw</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title" key="t-earning">Earning</li>
+
+                                                     <li>
+                                <a href="https://earnsolana.xyz/ptc" class="waves-effect">
+                                    <i class="fas fa-mouse"></i>
+                                    <span key="t-ptc">PTC <span class="badge badge-info">6</span></span>
+                                </a>
+                            </li>
+                                                
+                                                    <li>
+                                <a href="https://earnsolana.xyz/faucet" class="waves-effect">
+                                    <i class="fas fa-faucet"></i>
+                                    <span key="t-faucet">Faucet <span>
+                                            <i class='fa fa-check'></i>                                        </span></span>
+                                </a>
+                            </li>
+                        
+                                                                           <li>
+                                <a href="https://earnsolana.xyz/links" class="waves-effect">
+                                    <i class="fas fa-link"></i>
+                                    <span key="t-links">Shortlinks <span class="badge badge-success">9</span></span>
+                                </a>
+                            </li>
+                                                                            <li>
+                                <a href="https://earnsolana.xyz/achievements" class="waves-effect">
+                                    <i class="fas fa-trophy"></i>
+                                    <span key="t-achievements">Achievements</span>
+                                </a>
+                            </li>
+                        
+                                                    <li>
+                                <a href="https://earnsolana.xyz/auto" class="waves-effect">
+                                    <i class="fas fa-robot"></i>
+                                    <span key="t-auto">Auto Faucet</span>
+                                </a>
+                            </li>
+                        
+                                                    <li>
+                                <a href="https://earnsolana.xyz/tasks" class="waves-effect">
+                                    <i class="fas fa-tasks"></i>
+                                    <span key="t-tasks">Tasks <span class="badge badge-warning">1</span></span>
+                                </a>
+                            </li>
+                        
+                        
+                        <li class="menu-title" key="t-advertise">Advertise</li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="fas fa-user-tie"></i>
+                                <span key="t-advertiser">Advertiser</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="https://earnsolana.xyz/advertise" key="t-advertise-create">Create campaign</a></li>
+                                <li><a href="https://earnsolana.xyz/advertise/manage" key="t-advertise-manage">Manage campaigns</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="https://earnsolana.xyz/deposit" class="waves-effect">
+                                <i class="fas fa-donate"></i>
+                                <span key="t-deposit">Deposit</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://earnsolana.xyz/transfer" class="waves-effect">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span key="t-deposit">Transfer</span>
+                            </a>
+                        </li>
+
+                                                
+                        <li class="menu-title" key="t-account">Account</li>
+
+                        <li>
+                            <a href="https://earnsolana.xyz/profile" class="waves-effect">
+                                <i class="far fa-user-circle"></i>
+                                <span key="t-profile">Profile</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://earnsolana.xyz/history" class="waves-effect">
+                                <i class="fas fa-history"></i>
+                                <span key="t-history">History</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+
+                                <div class="container-fluid">
+                    <!-- start page title -->
+                    
+                    <!-- end page title -->
+
+                    <div class="ads">
+    <ins class="6a3cb70d32bb43c0b6b17039" style="display:inline-block;width:1px;height:1px;"></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","6a3cb70d32bb43c0b6b17039",["cdn.bmcdn6.com"], 0, new Date().getTime())}();</script></div>
+<div class="row g-2 mb-3">
+    <!-- Next Claim -->
+    <div class="col-6 col-md-3">
+        <div class="card">
+            <div class="card-body p-2 text-center">
+                <i class="fas fa-stopwatch text-primary"></i>
+                <div class="small text-muted">Next Claim</div>
+                <strong>
+                                            READY
+                                    </strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timer -->
+    <div class="col-6 col-md-3">
+        <div class="card">
+            <div class="card-body p-2 text-center">
+                <i class="far fa-clock text-info"></i>
+                <div class="small text-muted">Timer</div>
+                <strong>10s</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reward -->
+    <div class="col-6 col-md-3">
+        <div class="card">
+            <div class="card-body p-2 text-center">
+                <i class="fas fa-gift text-success"></i>
+                <div class="small text-muted">Reward</div>
+             <strong>0.00000139 SOL</strong>
+                            </div>
+        </div>
+    </div>
+
+    <!-- Claims Left -->
+    <div class="col-6 col-md-3">
+        <div class="card">
+            <div class="card-body p-2 text-center">
+                <i class="fas fa-fire text-warning"></i>
+                <div class="small text-muted">Claims Left</div>
+                <strong>390</strong>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-12 col-md-8 col-lg-6 order-md-2 mb-4 text-center">
+                <div class="ads">
+                    </div>
+                            <form action="https://earnsolana.xyz/faucet/verify" method="POST">
+                 
+                <input type="hidden" name="antibotlinks" id="antibotlinks" value="" /><div class="alert alert-warning text-center" id="atb-instruction"><div class="alert-body">Please click on the Anti-Bot links in the following order <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAYCAYAAABDX1s+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADoklEQVRYhe2YT4hNURzHP16v6TWmOS9p0jQk8fxJTgkrZUun/CsW/mQlkZImTRYWFlJ2QqLGxgbFhhNJKQuFkhNJTC+LSZLkME2aNFmce82Z07v3nfvuW1j4bt5995zz/f3e9/zO7/c7bw45kEL1AUPAIqAfuGes/pW3piikUJXExrSxerwkVx2oGas/d8pR9cgGgZ3AQmZEmAK+AN+S5wclHZ4HrAZWAcuApYmtKvAJ2FKGHzgKzAVOtvHDGKtlq7Gq97wK2AaMAteBprF6sqSDqQPbgQPAEuAj8BjQwDtgAhgOfOkU63G+58JYLbNE8Z2o4US40QXHQkwC94GHxuqP4WAS6qaMgST6FgNPYuaHYqQC+YJUgd9lnAqRGjFWP2wzdQB3ZMpgHfDeWP2lyCIplIEZgSreWBWYLkqWErZCGpoRVPNweaoMVgPPii4KI6USPBcSJCVrJ0rWmLeuTnlBlgNjnSz0ffSPzCwxpFD9wFqgJy/kfbK87B0inSuFquHy149I/7OwArhQkmOWIH/zhxRqM650jQMNKVTdWH0rj6iIGDBLyL7kcyJ2bQvbdVyUjQXvB4ENwBNjdVQE+kdmCuhJxBgBjhur9wKXiegPiogRHLE60ChZ4hcAk37TKIXaB9wG0t8QBV+QCaCBE+OQsfpl8v4tM7vYFQTJthd4FZl8szCAK+0ASKF2A4eBg8AxXJRHEfmCfMPt1oix+r33fogOSmK7H+iJUgN+F4mwFujFHQ2kUOuAE8AJY/UbYA0wZqyOIvIFaQJnjNXPgzmb6LCc5Yni5Zxe3HEti0dSqNfAKeC2sfpp8n4XrimMwl9BjNWTxuo7/qAUailO4XudeJi3695YjfIN4S/csT6Lu4ReBJBCbcRVnzvZS2ejkjWQlN2zwHljddmSmIeeLnCMA/OBHcB1Y/VEUs5HgFFj9fdYopaCJOVqFHjhR40UakAKtaeIp5HJ0r91Z9rI4WricmCDmRv5aeArcK2IT5VgYl0KdQT4ANw1Vp8L5jeAYSlU9K5GtO9TuGOTayOvzzFWTwM3k6/zpVBncK38cJhM221QxZvYj7uSLwRW4q7kIZq43aznkbZwOK+CfAX6kuYq00a7KmSsvoq7+l/C5ZP9Wc1YdEWTQvW2GW8kF7rceUWRHNHQxusu8pf6ayGTTAq1VQoVXcI6tLdVCvWzi3yFxMisMimCHNAErnTiWAE0gf3dIivZ8P3Hf/xr6GrC6wL+ACJ4ZanbniqNAAAAAElFTkSuQmCC" alt="" width="68" height="24"/> <a href="#" id="antibotlinks_reset">( reset )</a></div></div>                  <div class="atb">
+                                    </div>
+                <div class="atb">
+                                    </div>
+                <input type="hidden" name="csrf_token_name" id="token" value="b2d78803b5e002c4a14d92f17ccac4b7">
+                <div class="atb">
+                                    </div>
+              
+                <div class="atb">
+                    <div class="antibotlinks"></div>                </div>
+                <div class="ads">
+                    <ins class="6a3bf9b232bb43c0b6aeb028" style="display:inline-block;width:300px;height:250px;"></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","6a3bf9b232bb43c0b6aeb028",["cdn.bmcdn6.com"], 0, new Date().getTime())}();</script>                </div>
+                  <div class="atb">
+                    <div class="antibotlinks"></div>                </div>
+                <div class="atb">
+                    <div class="antibotlinks"></div>                </div>
+                <button type="submit" class="btn btn-primary btn-lg claim-button" disabled><i class="far fa-check-circle"></i> Collect your reward </button>
+              
+            </form>
+            </div>
+    <div class="col-6 col-md-2 col-lg-3 order-md-1 p-0 left-ads"></div>
+    <div class="col-6 col-md-2 col-lg-3 order-md-3 p-0 right-ads"></div>
+</div>
+<div class="ads">
+    <iframe scrolling="no" src="https://cryptocoinsad.com/ads/show.php?a=252994&b=400103" style="overflow: hidden; width: 300px; height: 250px;" frameborder="0"></iframe>
+
+
+<iframe scrolling="no" src="https://cryptocoinsad.com/ads/show.php?a=252994&b=400330" style="overflow: hidden; width: 728px; height: 90px;" frameborder="0"></iframe></div>                    <!-- end row -->
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p class="mb-2">&copy 2026 <a href="https://earnsolana.xyz/">EarnSolana</a> | <i class="fas fa-clock"></i> Server Time: 09:43.</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-right d-none d-sm-block">
+                                Powered by <a href="https://earnsolana.xyz/" target="_blank">EarnSolana</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay">
+        <div>
+            <a></a>
+        </div>
+    </div>
+        <!-- JAVASCRIPT -->
+    <script src="https://earnsolana.xyz/assets/libs/jquery/jquery.min.js"></script>
+    <script src="https://earnsolana.xyz/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://earnsolana.xyz/assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="https://earnsolana.xyz/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="https://earnsolana.xyz/assets/libs/node-waves/waves.min.js"></script>
+
+        <script type="text/javascript">
+        var site_url = "https://earnsolana.xyz/";
+    </script>
+    <!-- App js -->
+    <script src="https://earnsolana.xyz/assets/js/app.js?v=4.4.2"></script>
+    <script src="https://earnsolana.xyz/assets/js/vie/captcha.js?v=4.4.2"></script>
+                    <script type="text/javascript">
+        $("a[href='https://earnsolana.xyz/faucet']").attr('data-active', 'true');
+    </script>
+            <script type="text/javascript">var ablinks= ["<a href=\"#\" rel=\"8811\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACtUlEQVRYhe2XQWsTQRTHf5YSpIRSSigeSk/hISJSPKslKKKjoCjY+hFE9KxHTx4FL14KHopCscSe9qa1iuiplB48jNIPUGqUECQEKR5mlk4nu8lmswkb8H/Zndl5837vvXkTAkOWiNoYts/EyjXcf0Up1yUbKbhcwvYKmUkQg8iEu2ff+4uojUFD9vItGwNjM9arTVJfx1JuPAVcAS4Cc0ABaAGPtQ62ItYWgD2tA3+fMa2Dg06+xnsEmwQeAgvAPrAJlO3nAvAnwuwJMAssiqiiH5iIagH3tA52+wIUUbPAM6AEvAKWgWlg0VlW82xOAWeAl8AjG9gPG0zBLqvHwQHEnh2v+8aBpxbujdbBsi1XyTOreeO7QBO4AVSAF8B9G1iozTiGjoBaBxUH8jKmTA1M5kK5gA2tg79OUHPAOaBogVa0DqrAWTsX6mMqwBAy9Gef21oHrRjA3575EqaMB0AdeG3nLzhrasBOakBH+/b53Zuf8ZwBIKJKmEbYtYA7WgctEQVw3rH55Hd2WsA14C3mPLlyz5KbwTuYjn5nx2Fg88CUs65jeSFhF2sdNIHnEZ8eYLoS4CeAiJoArgErwDowyWFgbnnrwHYmgFGyDfQec5/BYQZvYS7tqj2vbmALzvvnbpc0JC9xm2wDuU1Ss9fRbWDVayZE1GmOHokPSfykBhRRx4EJFxC4bt/XI0zc8jaArYg1bUoNSPslXcf8qqzaM+vLLe8X987spCwB5zEZbcueiDrJ0Supa/eG6gdwxhtfJT57bnmbwNekTvoBnPbGRaAas7bivCcuL2SbwcjsiagycMKZSlxeSAlo78A94Jt91ojPnlveFj2Ut5Pz1N8j1pdF1CURtSSibmbBkIv/uUNjEFG/huIojXINNxAN6o97PxqDfDRFV40EJIwI6EhA5kX/AFsh32iNxOxbAAAAAElFTkSuQmCC\" alt=\"\" width=\"40\" height=\"40\" style=\"border:1px solid #222222;border-radius:5px;margin:2px;\" /></a>","<a href=\"#\" rel=\"8916\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAoCAYAAAAPOoFWAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABfUlEQVRYhe2XMUsDMRiGH00HEXEQW3RxEAQH8Uc4GSxxFfwHbk6O/gV3Z8VNyJLJVXAVRwcni1VKcRRTXHIQQtrLHZdSsO9yd28u35Pvy+UuBxkllehJJXo5GQXIhqDFXDCjrcgVu3llq38YeGqgafefPdBMaaHsBqlEB1gHfoy2r847A3aAb6PtZSosZVE/AQ/AhecdASfAYSpoLCyY5C+gyM73CLzqMKlEz2i76Vn7QH8MbFkqsVQbFoAA7tyx43kf3rnvV4NFVGSxKpVoBR5UKGUK7DMSOBssFtj3Gi1jvwSWLbNOxGtD2juxVhmNtgPgN/A2y4B15wxg6HuR9Vkd5rIYucu211TMZXJmrUmNngYu6J5Uohjkmmtb8QY2MbNU2DNwAOwC18A7sOHabhJjJMPOgXtgG+h6/gtwlQpL2jcabfvAMfDo2W/AqdF2FO0UUenHM5RUogtsAbdG22HZ/Y1p6pub/7mbmquWsjwsk4I2CqwTbP5X06j+AHItdvpHuKoFAAAAAElFTkSuQmCC\" alt=\"\" width=\"27\" height=\"40\" style=\"border:1px solid #222222;border-radius:5px;margin:2px;\" /></a>","<a href=\"#\" rel=\"4877\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAoCAYAAACb3CikAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAB80lEQVRYhe2XP0scQRiHH1zHO0SGlBY2ZyOkCKIYLGJgDAQkIOQLhECqtDaCn8AvYJ1SsPELBDaNIZAYLUxAC7G4OsgQxGTDkeLe03HY25ncne5G7te8+3tndt5n58+yC0P1KG3UcdkMV6oUTGU18FnqZcBbW6rYge98r+QVLG3DDrpwpU5epWD+XxVNozZqURuVaqM2+q2ThCBsms10a681knVgFvhWayTztUayWWsko7/OWl+1UWuuD4GMFDV2ILRRo126PJZ4ArwBJoElbVTd9SGIIIhAPAc+a6Nee/lp4IHYJtCBPZC86/sHAV4A48CKl1+UeAn8AKbFHzmAHT8QkHOJj7RRboEFid8BDZwKTNMDaQ4KZN/p+9TJz0ncExAE5tLxiA++xGJAPgB/5PqZDDpFeyMCfPTG+e370OmLArFpZoH3Yp/IiVgW/xM4BFrebTd8CCIKRLQtcQJ4BbwU/8WmWcsrXM/xQd0A6baONs0+AWdi3wIP5Xo/p/tYwBeDRKzjO4njTu5Q4oVX2PfxIEUQMlM7XM8KtKe/846wTr6e4+NBiiBsms3IXthymk5sml0A2DQ7on16AEZ8HwPyT9JGoY3a1UbtaaNWc9onivxQpatS36R9wdyfJylTpYNro45jIO4ENPbfuBI/7UP1qr/615jm+l1yXwAAAABJRU5ErkJggg==\" alt=\"\" width=\"34\" height=\"40\" style=\"border:1px solid #222222;border-radius:5px;margin:2px;\" /></a>"]</script>        <script src="https://earnsolana.xyz/assets/js/vie/antibotlinks.js?v=4.4.2"></script>
+                <script src="https://earnsolana.xyz/assets/js/vie/faucet.js?v=4.4.2"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+<script>
+var TestAd="//static.surfe.pro/js/net.js";function init(){adsBlocked(function(a){a&&(Swal.fire("Disable your Ad Blocker before using our service."),setTimeout(function(){window.location.href=""},5e3))})}function adsBlocked(a){fetch(new Request("//adoto.net/dashboard/display/items.php",{method:"HEAD",mode:"no-cors"})).then(function(a){return a}).then(function(b){console.log(b),a(!1)}).catch(function(b){console.log(b),a(!0)})}!function(){var b=performance.now(),a=document.createElement("script");a.onload=function(){(performance.now()-b).toFixed(2),a.parentNode.removeChild(a)},a.onerror=function(){var a=(performance.now()-b).toFixed(2)+"ms";Swal.fire("Ad Blocker Detected","script failed to load after "+a+", Disable it or you will see this forever.","error"),setTimeout(function(){window.location.href=""},5e3)},a.src=TestAd,document.body.appendChild(a)}(),document.addEventListener("DOMContentLoaded",init,!1)
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+(function() {
+    const checkDelay = 2000; // 2 seconds after page load
+    const adTest = document.createElement('div');
+
+    // These class names are commonly blocked by real ad-blockers
+    adTest.className = 'ads ad-banner ad-unit adsbox';
+    adTest.style.cssText = 'height:1px;width:1px;position:absolute;left:-9999px;';
+    document.body.appendChild(adTest);
+
+    function showWarning() {
+        Swal.fire({
+            title: 'Ad Blocker Detected!',
+            html: 'Please disable your ad blocker before using our service.<br><small>After disabling, refresh this page.</small>',
+            icon: 'error',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            confirmButtonText: 'I Disabled It'
+        }).then(() => {
+            location.reload();
+        });
+    }
+
+    function checkAdBlock() {
+        // 1ï¸âƒ£ Test if fake ad element is hidden or removed
+        const elementBlocked = (window.getComputedStyle(adTest).display === 'none') || (adTest.offsetParent === null);
+
+        // 2ï¸âƒ£ Test if a known ad URL request fails
+        const adRequest = new Request('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', { method: 'HEAD', mode: 'no-cors' });
+
+        fetch(adRequest).then(() => {
+            // URL fetched successfully â†’ No ad blocker detected
+            if (!elementBlocked) console.log('âœ… No ad blocker detected.');
+        }).catch(() => {
+            // Only warn if both checks fail (reduces false positives)
+            if (elementBlocked) {
+                showWarning();
+            }
+        });
+    }
+
+    window.addEventListener('load', function() {
+        setTimeout(checkAdBlock, checkDelay);
+    });
+})();
+</script>
+
+
+
+<script type="text/javascript"  charset="utf-8">
+// Place this code snippet near the footer of your page before the close of the /body tag
+// LEGAL NOTICE: The content of this website and all associated program code are protected under the Digital Millennium Copyright Act. Intentionally circumventing this code may constitute a violation of the DMCA.
+                            
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}(';q Q=\'\',28=\'21\';1P(q i=0;i<12;i++)Q+=28.11(D.N(D.P()*28.H));q 2R=1,2I=6f,2H=6d,2T=6b,2f=F(t){q o=!1,i=F(){z(k.1h){k.2U(\'2V\',e);G.2U(\'1T\',e)}T{k.2W(\'35\',e);G.2W(\'26\',e)}},e=F(){z(!o&&(k.1h||67.2z===\'1T\'||k.2Z===\'32\')){o=!0;i();t()}};z(k.2Z===\'32\'){t()}T z(k.1h){k.1h(\'2V\',e);G.1h(\'1T\',e)}T{k.33(\'35\',e);G.33(\'26\',e);q n=!1;34{n=G.5Y==6g&&k.1X}2s(a){};z(n&&n.2t){(F r(){z(o)J;34{n.2t(\'14\')}2s(e){J 5E(r,50)};o=!0;i();t()})()}}};G[\'\'+Q+\'\']=(F(){q t={t$:\'21+/=\',5B:F(e){q r=\'\',d,n,o,c,s,l,i,a=0;e=t.e$(e);1f(a<e.H){d=e.17(a++);n=e.17(a++);o=e.17(a++);c=d>>2;s=(d&3)<<4|n>>4;l=(n&15)<<2|o>>6;i=o&63;z(2q(n)){l=i=64}T z(2q(o)){i=64};r=r+Z.t$.11(c)+Z.t$.11(s)+Z.t$.11(l)+Z.t$.11(i)};J r},13:F(e){q n=\'\',d,l,c,s,a,i,r,o=0;e=e.1r(/[^A-5A-5z-9\\+\\/\\=]/g,\'\');1f(o<e.H){s=Z.t$.1M(e.11(o++));a=Z.t$.1M(e.11(o++));i=Z.t$.1M(e.11(o++));r=Z.t$.1M(e.11(o++));d=s<<2|a>>4;l=(a&15)<<4|i>>2;c=(i&3)<<6|r;n=n+U.V(d);z(i!=64){n=n+U.V(l)};z(r!=64){n=n+U.V(c)}};n=t.n$(n);J n},e$:F(t){t=t.1r(/;/g,\';\');q n=\'\';1P(q o=0;o<t.H;o++){q e=t.17(o);z(e<1D){n+=U.V(e)}T z(e>5q&&e<5K){n+=U.V(e>>6|6M);n+=U.V(e&63|1D)}T{n+=U.V(e>>12|2L);n+=U.V(e>>6&63|1D);n+=U.V(e&63|1D)}};J n},n$:F(t){q o=\'\',e=0,n=6J=1n=0;1f(e<t.H){n=t.17(e);z(n<1D){o+=U.V(n);e++}T z(n>71&&n<2L){1n=t.17(e+1);o+=U.V((n&31)<<6|1n&63);e+=2}T{1n=t.17(e+1);2B=t.17(e+2);o+=U.V((n&15)<<12|(1n&63)<<6|2B&63);e+=3}};J o}};q r=[\'6V==\',\'3F\',\'3G=\',\'3H\',\'3J\',\'42=\',\'3C=\',\'3D=\',\'3h\',\'3f\',\'4V=\',\'4U=\',\'5i\',\'75\',\'7H=\',\'3I\',\'3K=\',\'3L=\',\'3N=\',\'3P=\',\'3U=\',\'3X=\',\'3Z==\',\'41==\',\'3T==\',\'3B==\',\'3k=\',\'4S\',\'51\',\'4T\',\'4p\',\'4o\',\'4m\',\'4h==\',\'4g=\',\'4r=\',\'4B=\',\'4G==\',\'4t=\',\'4z\',\'4y=\',\'4x=\',\'4v==\',\'4u=\',\'3m==\',\'4Z==\',\'4w=\',\'4A=\',\'4C\',\'4D==\',\'4E==\',\'4F\',\'4H==\',\'4j=\'],y=D.N(D.P()*r.H),w=t.13(r[y]),Y=w,L=1,W=\'#4q\',a=\'#4c\',g=\'#4d\',f=\'#4e\',A=\'\',v=\'4f!\',b=\'4b 4i 4k 4l\\\'4n 4I 4s 2i 2h. 4J\\\'s 53.  55 56\\\'t?\',p=\'57 58 59-5a, 54 5b\\\'t 5d 5e Z 5f 5k.\',s=\'I 5h, I 5j 5c 52 2i 2h.  4M 4N 4O!\',o=0,u=0,n=\'4P.4Q\',l=0,M=e()+\'.2x\';F h(t){z(t)t=t.1L(t.H-15);q o=k.2K(\'4R\');1P(q n=o.H;n--;){q e=U(o[n].1I);z(e)e=e.1L(e.H-15);z(e===t)J!0};J!1};F m(t){z(t)t=t.1L(t.H-15);q e=k.4L;x=0;1f(x<e.H){1m=e[x].1p;z(1m)1m=1m.1L(1m.H-15);z(1m===t)J!0;x++};J!1};F e(t){q n=\'\',o=\'21\';t=t||30;1P(q e=0;e<t;e++)n+=o.11(D.N(D.P()*o.H));J n};F i(o){q i=[\'4X\',\'4Y==\',\'49\',\'4K\',\'2w\',\'4a==\',\'44=\',\'48==\',\'3A=\',\'3z==\',\'3y==\',\'3x==\',\'3w\',\'3v\',\'3u\',\'2w\'],a=[\'2n=\',\'3t==\',\'3s==\',\'3r==\',\'3q=\',\'3p\',\'3o=\',\'3n=\',\'2n=\',\'3l\',\'3j==\',\'3i\',\'3g==\',\'3e==\',\'3c==\',\'3d=\'];x=0;1R=[];1f(x<o){c=i[D.N(D.P()*i.H)];d=a[D.N(D.P()*a.H)];c=t.13(c);d=t.13(d);q r=D.N(D.P()*2)+1;z(r==1){n=\'//\'+c+\'/\'+d}T{n=\'//\'+c+\'/\'+e(D.N(D.P()*20)+4)+\'.2x\'};1R[x]=23 24();1R[x].1U=F(){q t=1;1f(t<7){t++}};1R[x].1I=n;x++}};F R(t){};J{2m:F(t,a){z(47 k.O==\'46\'){J};q o=\'0.1\',a=Y,e=k.1b(\'1x\');e.16=a;e.j.1l=\'1J\';e.j.14=\'-1i\';e.j.10=\'-1i\';e.j.1c=\'2c\';e.j.X=\'45\';q d=k.O.2O,r=D.N(d.H/2);z(r>15){q n=k.1b(\'2a\');n.j.1l=\'1J\';n.j.1c=\'1v\';n.j.X=\'1v\';n.j.10=\'-1i\';n.j.14=\'-1i\';k.O.43(n,k.O.2O[r]);n.1d(e);q i=k.1b(\'1x\');i.16=\'2M\';i.j.1l=\'1J\';i.j.14=\'-1i\';i.j.10=\'-1i\';k.O.1d(i)}T{e.16=\'2M\';k.O.1d(e)};l=3Y(F(){z(e){t((e.1W==0),o);t((e.1Y==0),o);t((e.1S==\'2g\'),o);t((e.1G==\'2C\'),o);t((e.1K==0),o)}T{t(!0,o)}},27)},1O:F(e,c){z((e)&&(o==0)){o=1;G[\'\'+Q+\'\'].1C();G[\'\'+Q+\'\'].1O=F(){J}}T{q p=t.13(\'3W\'),u=k.3V(p);z((u)&&(o==0)){z((2I%3)==0){q l=\'3S=\';l=t.13(l);z(h(l)){z(u.1Q.1r(/\\s/g,\'\').H==0){o=1;G[\'\'+Q+\'\'].1C()}}}};q y=!1;z(o==0){z((2H%3)==0){z(!G[\'\'+Q+\'\'].2A){q d=[\'3E==\',\'3R==\',\'3Q=\',\'3O=\',\'3M=\'],m=d.H,a=d[D.N(D.P()*m)],r=a;1f(a==r){r=d[D.N(D.P()*m)]};a=t.13(a);r=t.13(r);i(D.N(D.P()*2)+1);q n=23 24(),s=23 24();n.1U=F(){i(D.N(D.P()*2)+1);s.1I=r;i(D.N(D.P()*2)+1)};s.1U=F(){o=1;i(D.N(D.P()*3)+1);G[\'\'+Q+\'\'].1C()};n.1I=a;z((2T%3)==0){n.26=F(){z((n.X<8)&&(n.X>0)){G[\'\'+Q+\'\'].1C()}}};i(D.N(D.P()*3)+1);G[\'\'+Q+\'\'].2A=!0};G[\'\'+Q+\'\'].1O=F(){J}}}}},1C:F(){z(u==1){q C=2D.6W(\'2E\');z(C>0){J!0}T{2D.6X(\'2E\',(D.P()+1)*27)}};q h=\'6Z==\';h=t.13(h);z(!m(h)){q c=k.1b(\'70\');c.1Z(\'72\',\'73\');c.1Z(\'2z\',\'1g/74\');c.1Z(\'1p\',h);k.2K(\'76\')[0].1d(c)};77(l);k.O.1Q=\'\';k.O.j.19+=\'S:1v !1a\';k.O.j.19+=\'1u:1v !1a\';q M=k.1X.1Y||G.36||k.O.1Y,y=G.6R||k.O.1W||k.1X.1W,r=k.1b(\'1x\'),L=e();r.16=L;r.j.1l=\'2r\';r.j.14=\'0\';r.j.10=\'0\';r.j.X=M+\'1A\';r.j.1c=y+\'1A\';r.j.2v=W;r.j.1V=\'6Q\';k.O.1d(r);q d=\'<a 1p="6C://6D.6E"><2j 16="2k" X="2Q" 1c="40"><2y 16="2d" X="2Q" 1c="40" 6F:1p="6G:2y/6H;6B,6I+6K+6L+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+B+6N+6O+6P/78/79/7a/7j/7u+/7v/7w+7x/7y+7z/7t/7A/7C/7D/7E/7F+7G/7B+7s+7r+7q+7c+7d/7e+7f/7g+7h/7b+7i+7k+7l+7m/7n+7o/7p/6S/6z+5W+6y/5G+5H+5I+5J+E+5L/5F/5M/5O/5P/5Q/+5R/5S++5T/5N/5D+5v/5C+5o+5p==">;</2j></a>\';d=d.1r(\'2k\',e());d=d.1r(\'2d\',e());q i=k.1b(\'1x\');i.1Q=d;i.j.1l=\'1J\';i.j.1z=\'1N\';i.j.14=\'1N\';i.j.X=\'5s\';i.j.1c=\'5t\';i.j.1V=\'2J\';i.j.1K=\'.6\';i.j.2S=\'2u\';i.1h(\'5n\',F(){n=n.5u(\'\').5w().5x(\'\');G.2F.1p=\'//\'+n});k.1F(L).1d(i);q o=k.1b(\'1x\'),R=e();o.16=R;o.j.1l=\'2r\';o.j.10=y/7+\'1A\';o.j.5U=M-5V+\'1A\';o.j.6i=y/3.5+\'1A\';o.j.2v=\'#6k\';o.j.1V=\'2J\';o.j.19+=\'K-1w: "6l 6m", 1o, 1t, 1s-1q !1a\';o.j.19+=\'6n-1c: 6p !1a\';o.j.19+=\'K-1j: 6j !1a\';o.j.19+=\'1g-1B: 1y !1a\';o.j.19+=\'1u: 6q !1a\';o.j.1S+=\'3a\';o.j.2X=\'1N\';o.j.6s=\'1N\';o.j.6t=\'2l\';k.O.1d(o);o.j.6v=\'1v 6x 6r -6h 69(0,0,0,0.3)\';o.j.1G=\'2e\';q x=30,Y=22,w=18,A=18;z((G.36<39)||(5Z.X<39)){o.j.37=\'50%\';o.j.19+=\'K-1j: 61 !1a\';o.j.2X=\'66;\';i.j.37=\'65%\';q x=22,Y=18,w=12,A=12};o.1Q=\'<2Y j="1k:#68;K-1j:\'+x+\'1E;1k:\'+a+\';K-1w:1o, 1t, 1s-1q;K-1H:6a;S-10:1e;S-1z:1e;1g-1B:1y;">\'+v+\'</2Y><38 j="K-1j:\'+Y+\'1E;K-1H:6c;K-1w:1o, 1t, 1s-1q;1k:\'+a+\';S-10:1e;S-1z:1e;1g-1B:1y;">\'+b+\'</38><6e j=" 1S: 3a;S-10: 0.3b;S-1z: 0.3b;S-14: 29;S-2P: 29; 2o:5g 5l #5X; X: 25%;1g-1B:1y;"><p j="K-1w:1o, 1t, 1s-1q;K-1H:2p;K-1j:\'+w+\'1E;1k:\'+a+\';1g-1B:1y;">\'+p+\'</p><p j="S-10:6w;"><2a 6u="Z.j.1K=.9;" 6o="Z.j.1K=1;"  16="\'+e()+\'" j="2S:2u;K-1j:\'+A+\'1E;K-1w:1o, 1t, 1s-1q; K-1H:2p;2o-5y:2l;1u:1e;5r-1k:\'+g+\';1k:\'+f+\';1u-14:2c;1u-2P:2c;X:60%;S:29;S-10:1e;S-1z:1e;" 6T="G.2F.6Y();">\'+s+\'</2a></p>\'}}})();G.2N=F(t,e){q n=6U.6A,o=G.5m,r=n(),i,a=F(){n()-r<e?i||o(a):t()};o(a);J{4W:F(){i=1}}};q 2G;z(k.O){k.O.j.1G=\'2e\'};2f(F(){z(k.1F(\'2b\')){k.1F(\'2b\').j.1G=\'2g\';k.1F(\'2b\').j.1S=\'2C\'};2G=G.2N(F(){G[\'\'+Q+\'\'].2m(G[\'\'+Q+\'\'].1O,G[\'\'+Q+\'\'].62)},2R*27)});',62,478,'|||||||||||||||||||style|document||||||var|||||||||if||vr6||Math||function|window|length||return|font|||floor|body|random|tWCNXLRxHais||margin|else|String|fromCharCode||width||this|top|charAt||decode|left||id|charCodeAt||cssText|important|createElement|height|appendChild|10px|while|text|addEventListener|5000px|size|color|position|thisurl|c2|Helvetica|href|serif|replace|sans|geneva|padding|0px|family|DIV|center|bottom|px|align|gWGJKEuBbc|128|pt|getElementById|visibility|weight|src|absolute|opacity|substr|indexOf|30px|pMMIkUOdbs|for|innerHTML|spimg|display|load|onerror|zIndex|clientHeight|documentElement|clientWidth|setAttribute||ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789||new|Image||onload|1000|EvBzaAEfFF|auto|div|babasbmsgx|60px|FILLVECTID2|visible|TJCFsMAhQC|hidden|blocker|ad|svg|FILLVECTID1|15px|SatuGMggTW|ZmF2aWNvbi5pY28|border|300|isNaN|fixed|catch|doScroll|pointer|backgroundColor|cGFydG5lcmFkcy55c20ueWFob28uY29t|jpg|image|type|ranAlready|c3|none|sessionStorage|babn|location|XeqDRxpchK|juOAYGXnIe|ItAshzVVwK|10000|getElementsByTagName|224|banner_ad|zDKOYCNXPo|childNodes|right|160|NiouRZYmAa|cursor|XBerWLdcRX|removeEventListener|DOMContentLoaded|detachEvent|marginLeft|h3|readyState|||complete|attachEvent|try|onreadystatechange|innerWidth|zoom|h1|640|block|5em|d2lkZV9za3lzY3JhcGVyLmpwZw|YWR2ZXJ0aXNlbWVudC0zNDMyMy5qcGc|bGFyZ2VfYmFubmVyLmdpZg|YWQtY29udGFpbmVy|YmFubmVyX2FkLmdpZg|YWQtZm9vdGVy|ZmF2aWNvbjEuaWNv|c3F1YXJlLWFkLnBuZw|RGl2QWQ|YWQtbGFyZ2UucG5n|IGFkX2JveA|Q0ROLTMzNC0xMDktMTM3eC1hZC1iYW5uZXI|YWRjbGllbnQtMDAyMTQ3LWhvc3QxLWJhbm5lci1hZC5qcGc|MTM2N19hZC1jbGllbnRJRDI0NjQuanBn|c2t5c2NyYXBlci5qcGc|NzIweDkwLmpwZw|NDY4eDYwLmpwZw|YmFubmVyLmpwZw|YXMuaW5ib3guY29t|YWRzYXR0LmVzcG4uc3RhcndhdmUuY29t|YWRzYXR0LmFiY25ld3Muc3RhcndhdmUuY29t|YWRzLnp5bmdhLmNvbQ|YWRzLnlhaG9vLmNvbQ|cHJvbW90ZS5wYWlyLmNvbQ|Y2FzLmNsaWNrYWJpbGl0eS5jb20|QWRzX2dvb2dsZV8wNA|YWQtbGFiZWw|YWQtbGI|Ly93d3cuZ29vZ2xlLmNvbS9hZHNlbnNlL3N0YXJ0L2ltYWdlcy9mYXZpY29uLmljbw|YWRCYW5uZXJXcmFw|YWQtZnJhbWU|YWQtaGVhZGVy|QWRBcmVh|YWQtaW1n|QWRGcmFtZTE|QWRGcmFtZTI|Ly93d3cuZG91YmxlY2xpY2tieWdvb2dsZS5jb20vZmF2aWNvbi5pY28|QWRGcmFtZTM|Ly9hZHMudHdpdHRlci5jb20vZmF2aWNvbi5pY28|QWRGcmFtZTQ|Ly9hZHZlcnRpc2luZy55YWhvby5jb20vZmF2aWNvbi5pY28|Ly93d3cuZ3N0YXRpYy5jb20vYWR4L2RvdWJsZWNsaWNrLmljbw|Ly9wYWdlYWQyLmdvb2dsZXN5bmRpY2F0aW9uLmNvbS9wYWdlYWQvanMvYWRzYnlnb29nbGUuanM|QWRzX2dvb2dsZV8wMw|QWRMYXllcjE|querySelector|aW5zLmFkc2J5Z29vZ2xl|QWRMYXllcjI|setInterval|QWRzX2dvb2dsZV8wMQ||QWRzX2dvb2dsZV8wMg|YWQtaW5uZXI|insertBefore|YWdvZGEubmV0L2Jhbm5lcnM|468px|undefined|typeof|YWR2ZXJ0aXNpbmcuYW9sLmNvbQ|anVpY3lhZHMuY29t|YS5saXZlc3BvcnRtZWRpYS5ldQ|It|777777|adb8ff|FFFFFF|Welcome|QWREaXY|QWRJbWFnZQ|looks|c3BvbnNvcmVkX2xpbms|like|you|RGl2QWRD|re|RGl2QWRC|RGl2QWRB|EEEEEE|QWRCb3gxNjA|an|YWRUZWFzZXI|YmFubmVyYWQ|YWRBZA|YWRzZXJ2ZXI|YWRiYW5uZXI|YWRCYW5uZXI|YmFubmVyX2Fk|YmFubmVyaWQ|QWRDb250YWluZXI|YWRzbG90|cG9wdXBhZA|YWRzZW5zZQ|Z29vZ2xlX2Fk|Z2xpbmtzd3JhcHBlcg|b3V0YnJhaW4tcGFpZA|using|That|YWQuZm94bmV0d29ya3MuY29t|styleSheets|Let|me|in|moc|kcolbdakcolb|script|RGl2QWQx|RGl2QWQz|YWQtY29udGFpbmVyLTI|YWQtY29udGFpbmVyLTE|clear|YWRuLmViYXkuY29t|YWQubWFpbC5ydQ|YWRfY2hhbm5lbA||RGl2QWQy|my|okay|we|Who|doesn|But|without|advertising|income|can|disabled|keep|making|site|1px|understand|QWQzMDB4MTQ1|have|awesome|solid|requestAnimationFrame|click|3eUeuATRaNMs0zfml|gkJocgFtzfMzwAAAABJRU5ErkJggg|127|background|160px|40px|split|dEflqX6gzC4hd1jSgz0ujmPkygDjvNYDsU0ZggjKBqLPrQLfDUQIzxMBtSOucRwLzrdQ2DFO0NDdnsYq0yoJyEB0FHTBHefyxcyUy8jflH7sHszSfgath4hYwcD3M29I5DMzdBNO2IFcC5y6HSduof4G5dQNMWd4cDcjNNeNGmb02|reverse|join|radius|z0|Za|encode|Uv0LfPzlsBELZ|uJylU|setTimeout|SRWhNsmOazvKzQYcE0hV5nDkuQQKfUgm4HmqA2yuPxfMU1m4zLRTMAqLhN6BHCeEXMDo2NsY8MdCeBB6JydMlps3uGxZefy7EO1vyPvhOxL7TPWjVUVvZkNJ|E5HlQS6SHvVSU0V|j9xJVBEEbWEXFVZQNX9|1HX6ghkAR9E5crTgM|0t6qjIlZbzSpemi|2048|MjA3XJUKy|CGf7SAP2V6AjTOUa8IzD3ckqe2ENGulWGfx9VKIBB72JM1lAuLKB3taONCBn3PY0II5cFrLr7cCp|Kq8b7m0RpwasnR|UIWrdVPEp7zHy7oWXiUgmR3kdujbZI73kghTaoaEKMOh8up2M8BVceotd|BNyENiFGe5CxgZyIT6KVyGO2s5J5ce|14XO7cR5WV1QBedt3c|QhZLYLN54|e8xr8n5lpXyn|u3T9AbDjXwIMXfxmsarwK9wUBB5Kj8y2dCw|minWidth|120|F2Q|CCC|frameElement|screen||18pt|ocGNgLlJuP||||45px|event|999|rgba|200|295|500|247|hr|139|null|8px|minHeight|16pt|fff|Arial|Black|line|onmouseout|normal|12px|24px|marginRight|borderRadius|onmouseover|boxShadow|35px|14px|bTplhb|x0z6tauQYvPxwT0VM1lH9Adt5Lp|now|base64|http|blockadblock|com|xlink|data|png|iVBORw0KGgoAAAANSUhEUgAAAKAAAAAoCAMAAABO8gGqAAAB|c1|1BMVEXr6|sAAADr6|192|sAAADMAAAsKysKCgokJCRycnIEBATq6uoUFBTMzMzr6urjqqoSEhIGBgaxsbHcd3dYWFg0NDTmw8PZY2M5OTkfHx|enp7TNTUoJyfm5ualpaV5eXkODg7k5OTaamoqKSnc3NzZ2dmHh4dra2tHR0fVQUFAQEDPExPNBQXo6Ohvb28ICAjp19fS0tLnzc29vb25ubm1tbWWlpaNjY3dfX1oaGhUVFRMTEwaGhoXFxfq5ubh4eHe3t7Hx8fgk5PfjY3eg4OBgYF|fn5EREQ9PT3SKSnV1dXks7OsrKypqambmpqRkZFdXV1RUVHRISHQHR309PTq4eHp3NzPz8|9999|innerHeight|pyQLiBu8WDYgxEZMbeEqIiSM8r|onclick|Date|YWQtbGVmdA|getItem|setItem|reload|Ly95dWkueWFob29hcGlzLmNvbS8zLjE4LjEvYnVpbGQvY3NzcmVzZXQvY3NzcmVzZXQtbWluLmNzcw|link|191|rel|stylesheet|css|QWQzMDB4MjUw|head|clearInterval|Ly8vKysrDw8O4uLjkt7fhnJzgl5d7e3tkZGTYVlZPT08vLi7OCwu|v792dnbbdHTZYWHZXl7YWlpZWVnVRkYnJib8|PzNzc3myMjlurrjsLDhoaHdf3|I1TpO7CnBZO|YbUMNVjqGySwrRUGsLu6|uWD20LsNIDdQut4LXA|KmSx|0nga14QJ3GOWqDmOwJgRoSme8OOhAQqiUhPMbUGksCj5Lta4CbeFhX9NN0Tpny|BKpxaqlAOvCqBjzTFAp2NFudJ5paelS5TbwtBlAvNgEdeEGI6O6JUt42NhuvzZvjXTHxwiaBXUIMnAKa5Pq9SL3gn1KAOEkgHVWBIMU14DBF2OH3KOfQpG2oSQpKYAEdK0MGcDg1xbdOWy|iqKjoRAEDlZ4soLhxSgcy6ghgOy7EeC2PI4DHb7pO7mRwTByv5hGxF|QcWrURHJSLrbBNAxZTHbgSCsHXJkmBxisMvErFVcgE|aa2thYWHXUFDUPDzUOTno0dHipqbceHjaZ2dCQkLSLy|h0GsOCs9UwP2xo6|UimAyng9UePurpvM8WmAdsvi6gNwBMhPrPqemoXywZs8qL9JZybhqF6LZBZJNANmYsOSaBTkSqcpnCFEkntYjtREFlATEtgxdDQlffhS3ddDAzfbbHYPUDGJpGT|UADVgvxHBzP9LUufqQDtV|uI70wOsgFWUQCfZC1UI0Ettoh66D|szSdAtKtwkRRNnCIiDzNzc0RO|kmLbKmsE|1FMzZIGQR3HWJ4F1TqWtOaADq0Z9itVZrg1S6JLi7B1MAtUCX1xNB0Y0oL9hpK4|CXRTTQawVogbKeDEs2hs4MtJcNVTY2KgclwH2vYODFTa4FQ|qdWy60K14k|oGKmW8DAFeDOxfOJM4DcnTYrtT7dhZltTW7OXHB1ClEWkPO0JmgEM1pebs5CcA2UCTS6QyHMaEtyc3LAlWcDjZReyLpKZS9uT02086vu0tJa|v7|b29vlvb2xn5|ejIzabW26SkqgMDA7HByRAADoM7kjAAAAInRSTlM6ACT4xhkPtY5iNiAI9PLv6drSpqGYclpM5bengkQ8NDAnsGiGMwAABetJREFUWMPN2GdTE1EYhmFQ7L339rwngV2IiRJNIGAg1SQkFAHpgnQpKnZBAXvvvXf9mb5nsxuTqDN|cIa9Z8IkGYa9OGXPJDm5RnMX5pim7YtTLB24btUKmKnZeWsWpgHnzIP5UucvNoDrl8GUrVyUBM4xqQ|ISwIz5vfQyDF3X|MgzNFaCVyHVIONbx1EDrtCzt6zMEGzFzFwFZJ19jpJy2qx5BcmyBM|Lnx0tILMKp3uvxI61iYH33Qq3M24k|RUIrwGk|VOPel7RIdeIBkdo|HY9WAzpZLSSCNQrZbGO1n4V4h9uDP7RTiIIyaFQoirfxCftiht4sK8KeKqPh34D2S7TsROHRiyMrAxrtNms9H5Qaw9ObU1H4Wdv8z0J8obvOo|wd4KAnkmbaePspA|0idvgbrDeBhcK|EuJ0GtLUjVftvwEYqmaR66JX9Apap6cCyKhiV|QWQ3Mjh4OTA'.split('|'),0,{}));
+</script>      <script>
+$(document).on('click touchstart', function(e){
+
+    if (!$('body').hasClass('sidebar-enable')) {
+        return;
+    }
+
+    if (
+        !$(e.target).closest('.vertical-menu').length &&
+        !$(e.target).closest('#vertical-menu-btn').length
+    ) {
+
+        $('.vertical-menu').css({
+            'transform':'translateX(-100%)',
+            'opacity':'0.95'
+        });
+
+        setTimeout(function(){
+            $('body').removeClass('sidebar-enable');
+
+            $('.vertical-menu').css({
+                'transform':'',
+                'opacity':''
+            });
+        }, 300);
+
+    }
+
+});
+</script>
+<script>
+(async function () {
+    if (navigator.brave && await navigator.brave.isBrave()) {
+        document.documentElement.innerHTML = `
+        <div style="
+            position:fixed;
+            inset:0;
+            background:#0a0a0a;
+            color:#fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            z-index:999999999;
+            font-family:Arial,sans-serif;
+            padding:20px;
+        ">
+            <div>
+                <h1>Brave Browser Detected</h1>
+                <p>Please disable Brave Shields or use another browser to continue.</p>
+            </div>
+        </div>`;
+    }
+})();
+</script>
+
+<ins class="6a3cb6bc4a60da4f9c904791" style="display:inline-block;width:1px;height:1px;"></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","6a3cb6bc4a60da4f9c904791",["cdn.bmcdn6.com"], 0, new Date().getTime())}();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1238254cb3a603f',t:'MTc4MjU1MzQyNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"01d9fb2a4eb548b4a3ec661cd64b5943","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
